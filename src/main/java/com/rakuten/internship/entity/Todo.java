@@ -5,5 +5,6 @@ package com.rakuten.internship.entity;
  * エンティティーとして使えるように、コードを記入してください。
  */
 public class Todo {
+    
     // TODO 必要なコードを記入してください。
 }
