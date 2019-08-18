@@ -5,6 +5,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.ResultSet;
+
+
 /**
  * このクラスは、タスク管理の対象となるTodoのエンティティーです。
  * エンティティーとして使えるように、コードを記入してください。
@@ -12,6 +20,6 @@ import javax.persistence.Table;
 
 public class Todo {
     //push
-    
     // TODO 必要なコードを記入してください。
+ 
 }
