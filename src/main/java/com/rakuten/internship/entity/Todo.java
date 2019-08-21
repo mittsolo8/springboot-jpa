@@ -6,20 +6,44 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.ResultSet;
 
 
 /**
  * このクラスは、タスク管理の対象となるTodoのエンティティーです。
  * エンティティーとして使えるように、コードを記入してください。
  */
+@Entity
+@Table(name = "todoitems")
 
 public class Todo {
-    //push
-    // TODO 必要なコードを記入してください。
- 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "todoitems_id_seq")
+    @SequenceGenerator(name = "todoitems_id_seq", sequenceName = "todoitems_id_seq")
+    private Long id;
+    private String title;
+    private Boolean done;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Boolean getDone() {
+        return done;
+    }
+
+    public void setDone(Boolean done) {
+        this.done = done;
+    }
 }
