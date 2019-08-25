@@ -47,7 +47,10 @@ public class Todo {
         this.done = done;
     }
     
-    
+     @Override
+    public String toString() {
+        return "Player [id=" + id + "title=" + title + ", done=" + done + "]";
+    }
     
     
 }
