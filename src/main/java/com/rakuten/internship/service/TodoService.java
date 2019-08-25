@@ -17,12 +17,21 @@ import java.util.List;
 @Service
 @Transactional
 public class TodoService {
+<<<<<<< HEAD
     
     @Autowired
     private TodoRepository todoRepository;
+=======
+    @Autowired
+    private 
+>>>>>>> refs/remotes/origin/master
 
   
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> refs/remotes/origin/master
     public List<Todo> findTodos(){
         return todoRepository.findTodos();
     }
