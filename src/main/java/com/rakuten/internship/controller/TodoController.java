@@ -28,10 +28,10 @@ public class TodoController {
     private TodoService todoService;
     
     @GetMapping
-    public String home(Model model) {
-         List<Todo> players = todoService.findAll();
-        model.addAttribute("players", players);
-        return "todo/home"; 
+    public String index(Model model) {
+         List<Todo> todo = todoService.findAll();
+        model.addAttribute("todo", todo);
+        return "todo/index"; 
         
     }
     
@@ -47,12 +47,14 @@ public class TodoController {
         model.addAttribute("todo", todo);
         return "todo/edit";
     }
+    /*
     @GetMapping("{id}")
     public String show(@PathVariable Long id, Model model) {
         Todo todo = todoService.findOne(id);
         model.addAttribute("todo", todo);
         return "todo/show";
     }
+    */
     @PostMapping
     public String create(@ModelAttribute Todo todo) { 
         todoService.save(todo);
