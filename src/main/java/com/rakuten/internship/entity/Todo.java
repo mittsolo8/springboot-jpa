@@ -19,15 +19,15 @@ public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "todoitems_id_seq")
     @SequenceGenerator(name = "todoitems_id_seq", sequenceName = "todoitems_id_seq")
-    private Long id;
+    private Integer id;
     private String title;
     private Boolean done;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

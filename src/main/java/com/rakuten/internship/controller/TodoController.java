@@ -22,40 +22,46 @@ import java.util.List;
  * コントローラーとして使えるように、コードを記入してください。
  */
 @Controller
-@RequestMapping ("/todo")
+@RequestMapping ("/")
 public class TodoController {
     @Autowired
     private TodoService todoService;
     
     @GetMapping
     public String index(Model model) {
-         List<Todo> todo = todoService.findAll();
-        model.addAttribute("todo", todo);
-        return "todo/index"; 
-        
+        List<Todo> todos = todoService.findAll();        
+        model.addAttribute("todos", todos);
+        return "home"; 
     }
-    
 
-    @GetMapping("new")
-    public String newTodo(Model model) {
-        return "todo/new";
+
+    @GetMapping("create")
+    public String createTodo(Model model) {
+        return "create";
     }
     
+    @PostMapping("/create")
+    public String createTodo(@ModelAttribute Todo todo) {
+        // TODO 必要なコードを作成してください。
+        todoService.save(todo);
+        return "complete";
+    }
+    
+    /*
     @GetMapping("{id}/edit")
     public String edit(@PathVariable Long id, Model model) { 
         Todo todo = todoService.findOne(id);
         model.addAttribute("todo", todo);
         return "todo/edit";
     }
-    /*
     @GetMapping("{id}")
     public String show(@PathVariable Long id, Model model) {
         Todo todo = todoService.findOne(id);
         model.addAttribute("todo", todo);
         return "todo/show";
     }
-    */
-    @PostMapping
+    
+    @PostMapping()
     public String create(@ModelAttribute Todo todo) { 
         todoService.save(todo);
         return "redirect:/todo"; 
@@ -71,13 +77,7 @@ public class TodoController {
         todoService.delete(id);
         return "redirect:/todo";
     }
-    /*
-    @PostMapping("/create")
-    public String createTodo(@ModelAttribute Todo todo) {
-        // TODO 必要なコードを作成してください。
-        return null;
-    }
-     */  
-    
+    */
+
     
 }
