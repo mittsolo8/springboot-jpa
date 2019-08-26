@@ -11,6 +11,6 @@ import java.util.List;
  */
 @Repository
 public interface TodoRepository extends JpaRepository<Todo, Long> {
-    public List<Todo> findByDoneOrderByTitleAsc(boolean done);
+   // public List<Todo> findByDoneOrderByTitleAsc();
     
 }

@@ -21,7 +21,7 @@ public class Todo {
     @SequenceGenerator(name = "todoitems_id_seq", sequenceName = "todoitems_id_seq")
     private Integer id;
     private String title;
-    private Boolean done;
+    private String description;
 
     public Integer getId() {
         return id;
@@ -39,17 +39,17 @@ public class Todo {
         this.title = title;
     }
 
-    public Boolean getDone() {
-        return done;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDone(Boolean done) {
-        this.done = done;
+    public void setDescription(String description) {
+        this.description = description;
     }
     
      @Override
     public String toString() {
-        return "Player [id=" + id + "title=" + title + ", done=" + done + "]";
+        return "Player [id=" + id + "title=" + title + ", description=" + description + "]";
     }
     
     
