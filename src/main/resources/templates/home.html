@@ -8,7 +8,7 @@
         let btn = document.getElementById("btn");
         btn.addEventListener("click", gotoform, false);
     }
-  // TODO ボタンを制御するためのJSコードを作成してください。
+
   </script>
   <body>
     <h1>
@@ -24,6 +24,9 @@
         </tr>
         <tr th:each="todo:${todos}">
           <!-- TODO データを出力するためのコードを作成してください。 -->
+        　<td th:text="*{id}"></td>
+          <td th:text="*{title}"></td>
+          <td th:text="*{description}"></td>
         </tr>
     </table>
     <br>

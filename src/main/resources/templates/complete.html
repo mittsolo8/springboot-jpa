@@ -1,7 +1,13 @@
 <html>
   <title>Summer Short Internship 2019</title>
   <script type="text/javascript">
-  // TODO ここにボタンを制御するためのJSコードを記入してください。
+      function backhome() {
+    location.href="/";
+    }
+     window.onload = function(){
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", backhome, false);
+    }
   </script>
   <body>
     	<h1>
