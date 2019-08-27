@@ -46,12 +46,6 @@ public class Todo {
     public void setDescription(String description) {
         this.description = description;
     }
-    /*
-     @Override
-    public String toString() {
-        return "Player [id=" + id + "title=" + title + ", description=" + description + "]";
-    }
-    */
     
     
 }

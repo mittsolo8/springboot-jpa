@@ -19,29 +19,14 @@ import java.util.List;
 public class TodoService {
     @Autowired
     private TodoRepository todoRepository;
-  /*
-    public List<Todo> findTodos(){
-        return todoRepository.findTodos();
-    }
-*/
 
     public List<Todo> findAll() {
         return todoRepository.findAll();
     }
-    /*
-    public Todo findOne(Long id){
-        return todoRepository.findOne(id);
-    }
-    */
-  
+
     public Todo save(Todo todo) {
         
         return todoRepository.save(todo);
     }
-    /*
-    public void delete(Integer id){
-        todoRepository.delete(id);
-    }
-    */
-    
+ 
 }
